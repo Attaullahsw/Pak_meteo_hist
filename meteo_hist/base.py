@@ -657,6 +657,8 @@ class MeteoHist:
             f"accept-language={lang}"
         )
 
+        print(url)
+
         # Get the data from the API
         location = requests.get(url, timeout=30)
         location = location.json()
