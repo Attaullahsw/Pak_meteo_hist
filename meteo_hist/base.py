@@ -660,7 +660,9 @@ class MeteoHist:
         print(url)
 
         # Get the data from the API
-        location = requests.get(url, timeout=30)
+         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
+        # Get the data from the API
+        location = requests.get(url, timeout=30, headers=headers)
         location = location.json()
 
         keys = [
